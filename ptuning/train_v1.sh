@@ -1,5 +1,5 @@
 PRE_SEQ_LEN=256
-LR=2e-4
+LR=2e-2
 
 CUDA_VISIBLE_DEVICES=0 python3 /content/ChatGLM-6B/ptuning/main.py \
     --do_train \
@@ -17,7 +17,7 @@ CUDA_VISIBLE_DEVICES=0 python3 /content/ChatGLM-6B/ptuning/main.py \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 16 \
     --predict_with_generate \
-    --max_steps 3000 \
+    --max_steps 100 \
     --logging_steps 10 \
     --save_steps 1000 \
     --learning_rate $LR \
