@@ -1,7 +1,7 @@
 PRE_SEQ_LEN=256
 LR=2e-4
 
-CUDA_VISIBLE_DEVICES=0 python3 ChatGLM-6B/main.py \
+CUDA_VISIBLE_DEVICES=0 python3 /content/ChatGLM-6B/ptuning/main.py \
     --do_train \
     --train_file ptune_data_v1.json \
     --validation_file ptune_data_v1.json \
