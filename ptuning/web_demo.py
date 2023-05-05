@@ -90,7 +90,7 @@ def reset_state():
 
 
 with gr.Blocks() as demo:
-    gr.HTML("""<h1 align="center">ChatGLM</h1>""")
+    gr.HTML("""<h1 align="center">MyGPT V1.0 by Sixiangpeng</h1>""")
 
     chatbot = gr.Chatbot()
     with gr.Row():
