@@ -3,8 +3,8 @@ LR=2e-4
 
 CUDA_VISIBLE_DEVICES=0 python3 /content/ChatGLM-6B/ptuning/main.py \
     --do_train \
-    --train_file ptune_data_v1.json \
-    --validation_file ptune_data_v1.json \
+    --train_file ptune_data_100.json \
+    --validation_file ptune_data_100.json \
     --prompt_column instruction \
     --response_column output \
     --overwrite_cache \
