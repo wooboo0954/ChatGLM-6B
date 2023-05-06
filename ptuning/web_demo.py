@@ -73,6 +73,7 @@ def parse_text(text):
 
 
 def predict(input, chatbot, max_length, top_p, temperature, history):
+    history=[]
     chatbot.append((parse_text(input), ""))
     for response, history in model.stream_chat(tokenizer, input, history, max_length=max_length, top_p=top_p,
                                                temperature=temperature):
