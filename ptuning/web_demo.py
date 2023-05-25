@@ -30,8 +30,8 @@ def postprocess(self, y):
         return []
     for i, (message, response) in enumerate(y):
         y[i] = (
-            #None if message is None else mdtex2html.convert((message)),
-            #None if response is None else mdtex2html.convert(response),
+            None if message is None else mdtex2html.convert((message)),
+            None if response is None else mdtex2html.convert(response),
         )
     return y
 
@@ -69,7 +69,6 @@ def parse_text(text):
                     line = line.replace("$", "&#36;")
                     line = line.replace("</p>", "")
                     line = line.replace("<p>", "")
-               ## line = line.sub(r'<[^>]+>', '', line)
                 lines[i] = "<br>"+line
     text = "".join(lines)
     return text
